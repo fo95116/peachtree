@@ -30,24 +30,36 @@ $(function() {
   //   console.log(parsed_json)
   //   }
   // });
+
   $('input[name="commit"]').click(function(event) {
     event.preventDefault();
 
     var $location = $("#location");
+    var $state = $("#state");
     var params = { location: { title: $location.val()} }
 
-        $location.val("");
+     // var $location = $location.val();
+     var $location = $location.val().trim().replace(/\s+/g, "_");
+     var $state = $state.val().trim().toUpperCase();
 
-        console.log(params)
+     console.log($location)
 
-        // 2. Post that data to the server
+     // append to div#bucket_items
+     // $("#weather").html('<h3> You picked ' + $location + " " + $state + '</h3>')
 
-        // $.post("/environments", params).done(function(data){
-        //     console.log("We sub mitted our params!", data);
+     $.ajax({
+       url : "http://api.wunderground.com/api/441472960cf74c21/conditions/q/"+ $state + "/" + $location + ".json",
+       dataType : "jsonp",
+       success : function(parsed_json) {
+         var city = parsed_json['current_observation']['display_location']['city']
+         var temp_f = parsed_json['current_observation']['temp_f'];
+         var weather = parsed_json['current_observation']['weather']
+         $('#weather').html('<h3>The temp of ' + city + " is " + temp_f +
+         " and is " + weather + '</h3>')
+         console.log(parsed_json)
+       }
+     });
 
-        //     // append to div#bucket_items
-        //     $("#weather").append(params(data));
-        // });
   })
 
 
