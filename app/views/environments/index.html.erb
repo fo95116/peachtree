@@ -1,1 +1,21 @@
-<h1>hellow world!</h1>
+<h1>Wthr Rnnr</h1>
+
+<div id="search">
+
+  <div class="row">
+    <div class="large-6 columns">
+        <fieldset>
+          <legend>To run? Or not to run?</legend>
+            <%= form_tag('/environments', :remote => true) do %>
+                <%= text_field_tag "location", nil, :placeholder => "city", :size => 30 %>
+                <%= submit_tag "Run?" %>
+            <% end %>
+        </fieldset>
+    </div>
+  </div>
+
+</div>
+
+<div id="weather">
+
+</div>
