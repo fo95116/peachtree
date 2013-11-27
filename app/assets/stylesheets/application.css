@@ -14,10 +14,74 @@
  *= require_tree .
  */
 
-html {
+body {
   background: url(http://www.highsnobiety.com/files/2012/10/Nike-Running-Holiday-2012-Apparel-Collection-Lookbook-02.jpg) no-repeat center center fixed !important;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
 }
+
+#button {
+  background-color: #008cba;
+  border: none;
+  padding: 10px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  letter-spacing: .0975em;
+  color: #fff;
+}
+
+#button:hover {
+  background-color: #007cba;
+
+}
+
+fieldset {
+  background-color: rgba(255,255,255, 0.3);
+  border-style: none !important;
+
+}
+
+#wrapper {
+  width: 100%;
+}
+
+
+#weather, #condition, #shelter {
+  float: left;
+  background-color: #007cba;
+  height: 185px;
+}
+
+.small-4 {
+  float: left;
+}
+
+div.small-6.columns {
+  float: left !important;
+}
+
+h3 {
+  color: black !important;
+}
+
+#house {
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+
+#weather h3 {
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+
+#condition img {
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+
+#shelter img {
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+

@@ -76,42 +76,42 @@ $(function() {
          _.each(green, function(item) {
           console.log(item);
             if(weather == item) {
-              $('#condition').html('<p> Have a good Workout!</p>');
+              $('#condition').html('<img src="assets/running-100.png"/><img src="assets/sun-100.png"/>');
             }
          })
          //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          _.each(red, function(x) {
             console.log(x);
             if(weather == x) {
-              $('#condition').html('<p> dont run fool! </p>');
+              $('#condition').html('<img src="assets/coffee-100.png"/>');
             }
          })
          //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          _.each(visibility, function(y) {
             console.log(y);
             if(weather == y) {
-              $('#condition').html('<p> Wear some 3M fool!</p>');
+              $('#condition').html('<img src="assets/running-100.png"/><img src="assets/partly_cloudy_day-100.png"/>');
             }
          })
          //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          _.each(danger, function(z) {
             console.log(z);
             if(weather == z) {
-              $('#condition').html('<p> Stay Home!</p>');
+              $('#condition').html('<img src="assets/self_distruct_button-100.png"/>');
             }
          })
          //+++++++++++++++++++++++++++++++++++++++++++++++++
          if(temp_f > 70 && temp_f < 98) {
-          $('#shelter').html('<p> its perfect</p>')
+          $('#shelter').html('<img src="assets/jumper-100.png"/>')
          }
          else if(temp_f > 45 && temp_f < 70) {
-          $('#shelter').html('<p> burr its cold </p>')
+          $('#shelter').html('<img src="assets/jacket-100.png"/>')
          }
          else if(temp_f < 45) {
-          $('#shelter').html('<p> ahh its cold</p>')
+          $('#shelter').html('<img src="assets/viking_helmet-100.png"/>')
          }
          else if(temp > 98) {
-          $('#shelter').html('<p> its burning hot</p>')
+          $('#shelter').html('<img src="assets/t_shirt-100.png"/>')
          }
          //++++++++++++++++++++++++++++++++++++++++++++++++
        }

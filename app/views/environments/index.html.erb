@@ -1,24 +1,39 @@
-<h1>Wthr Rnnr</h1>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Weather Rnnr</a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="http://www.wunderground.com/"><img src="assets/clouds-32.png"/></a></li>
+      </li>
+    </ul>
+  </section>
+</nav>
 
-<div id="search">
+<div id="wrapper">
 
-  <div class="row">
-    <div class="large-6 columns">
+    <div class="small-4 columns">
         <fieldset>
-          <legend>To run? Or not to run?</legend>
+
             <%= form_tag('/environments', :remote => true) do %>
                 <%= text_field_tag "location", nil, :placeholder => "city", :size => 30 %>
                 <%= text_field_tag "state", nil, :placeholder => "state", :size => 15 %>
-                <%= submit_tag "Run?" %>
+                <%= submit_tag "Run?", :id => "button" %>
             <% end %>
         </fieldset>
     </div>
+
+
+
+    <div id="house">
+      <div id="weather"></div>
+
+      <div id="condition"></div>
+
+      <div id="shelter"></div>
+    </div>
   </div>
-
 </div>
-
-<div id="weather"></div>
-
-<div id="condition"></div>
-
-<div id="shelter"></div>
