@@ -90,7 +90,7 @@ $(function() {
          _.each(visibility, function(y) {
             console.log(y);
             if(weather == y) {
-              $('#condition').html('<img src="assets/running-100.png"/><img src="assets/partly_cloudy_day-100.png"/>');
+              $('#condition').html('<img src="assets/bus-100.png"/><img src="assets/partly_cloudy_day-100.png"/>');
             }
          })
          //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
