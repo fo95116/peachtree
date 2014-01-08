@@ -14,10 +14,8 @@
 </nav>
 
 <div class="row">
-
-    <div class="small-4 columns">
+    <div class="small-8 columns large-4 columns">
         <fieldset>
-
             <%= form_tag('/environments', :remote => true) do %>
                 <%= text_field_tag "location", nil, :placeholder => "city", :size => 30 %>
                 <%= text_field_tag "state", nil, :placeholder => "state", :size => 15 %>
@@ -25,15 +23,18 @@
             <% end %>
         </fieldset>
     </div>
+</div><!-- end of form div -->
 
 
 
-    <div id="house">
-      <div id="weather"></div>
-
-      <div id="condition"></div>
-
-      <div id="shelter"></div>
-    </div>
+<div class="row">
+  <div class="small-9 columns large-4 columns">
+    <div id="weather"></div>
   </div>
-</div>
+  <div class="small-9 columns large-4 columns">
+    <div id="condition"></div>
+  </div>
+  <div class="small-9 columns large-4 columns">
+    <div id="shelter"></div>
+  </div>
+</div
